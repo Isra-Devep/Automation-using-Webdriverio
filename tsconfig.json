@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "types": [
+      "node",
+      "webdriverio/async",
+      "expect-webdriverio",
+      "@wdio/cucumber-framework"
+    ],
+    "typeRoots": ["node_modules/@types"],
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "resolveJsonModule": true,
+    "baseUrl": "main",
+    "paths": {
+      "@wdio-ui/*": ["ui/*"],
+      "@wdio-utils/*": ["utils/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
+
+
+
+
+
+
+
+
+
+
