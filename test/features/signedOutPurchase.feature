@@ -3,7 +3,7 @@
 Feature: A user purchases items from a store
         Scenario:  A signed out user purchases item(s) from a designated store and verifies that the order is successfully sent.
 
-        Given User opens the Open market application and confirms that he is not signed in
+        Given User opens the One market application and confirms that he is not signed in
         Then User locates the store they wish to purchase from and opens it
         Then User locates the merchandise they want to purchase and confirms that they are available
         Then User adds the items to the cart and confirms that the cart is updated

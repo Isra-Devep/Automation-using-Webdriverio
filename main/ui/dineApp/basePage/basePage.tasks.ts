@@ -1,9 +1,9 @@
 import * as locators from "../basePage/basePage.locators";
 import * as commonActions from "utils/browserActions.utils";
-var config = require("/Users/emumba/Desktop/automation/wdio.conf.ts").config;
+import credentials from "ui/config/evnCredentials.json";
 
 export async function openApplication() {
-  await browser.url(config.b);
+  await browser.url(credentials.baseURL);
 }
 
 export async function checkSignInStatus() {
