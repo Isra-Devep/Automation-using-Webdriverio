@@ -1,46 +1,54 @@
-import * as locators from "../menuPage/menuPage.locators"
-import * as commonActions from "utils/browserActions.utils"
+import * as locators from "../menuPage/menuPage.locators";
+import * as commonActions from "utils/browserActions.utils";
 
+export async function checkMerchandiseAvailability(merchandiseName) {
+  const el = await locators.merchandiseActionButton(merchandiseName);
+  await el.scrollIntoView();
 
-export async function checkMerchandiseAvailability(merchandiseName)
-{ 
+  let isExisting = await el.isClickable();
+  if (!isExisting) {
+    console.log("item Sold out");
+    return isExisting;
+  }
 
-    await (await locators.merchandiseActionButton(merchandiseName)).scrollIntoView()
-    let isExisting =await (await locators.merchandiseActionButton(merchandiseName)).isClickable()
-    if (await isExisting==false)
-    {
-        await console.log("item Sold out")
-        return await isExisting;
-    }
-    if(await isExisting==true)
-    {   
-        console.log(merchandiseName+ " is here")
-        return await isExisting;
-    }
-}
-export async function addMerchandiseToCart(merchandiseName,merhcandiseQuntity)
-{
-    await checkMerchandiseAvailability(merchandiseName);
-    await console.log("into the adding funciton")
-    for (let i=0;i<merhcandiseQuntity;i++)
-    {   
-       if (await checkMerchandiseAvailability(merchandiseName)==true)
-       {
-            await (await locators.merchandiseActionButton(merchandiseName)).click();
-            console.log("clicked")
-       }
-       else
-       {
-           await console.log("ran out of items. the item was addded "+i+" times before running out")
-       }
-    }
-    let merchandisePrise=(await (await locators.merchandisePrice(merchandiseName)).getText());
-    await console.log("the "+ merchandiseName+ " price without dollar is "+merchandisePrise.substring(merchandisePrise.indexOf('$')+1))
-    return await merchandisePrise.substring(merchandisePrise.indexOf('$')+1)
+  console.log(merchandiseName + " is here");
+  return isExisting;
 }
 
+export async function addMerchandiseToCart(
+  merchandiseName,
+  merhcandiseQuntity
+) {
+  await checkMerchandiseAvailability(merchandiseName);
+  await console.log("into the adding funciton");
 
-export async function openCart()
-{
-    await (await locators.shoppingCartBtn).click();
+  for (let i = 0; i < merhcandiseQuntity; i++) {
+    const isAvailable = await checkMerchandiseAvailability(merchandiseName);
+    if (isAvailable) {
+      const el = await locators.merchandiseActionButton(merchandiseName);
+      await el.click();
+      console.log("clicked");
+    } else {
+      console.log(
+        `ran out of items. the item was added ${i} times before running out`
+      );
+    }
+  }
+
+  const el = await locators.merchandisePrice(merchandiseName);
+  let merchandisePrice = await el.getText();
+
+  console.log(
+    "the " +
+      merchandiseName +
+      " price without dollar is " +
+      merchandisePrice.substring(merchandisePrice.indexOf("$") + 1)
+  );
+
+  return merchandisePrice.substring(merchandisePrice.indexOf("$") + 1);
+}
+
+export async function openCart() {
+  const el = await locators.shoppingCartBtn;
+  await el.click();
 }

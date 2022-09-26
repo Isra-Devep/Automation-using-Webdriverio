@@ -1,1 +1,1 @@
-export let orderPickup =('//button[@test-data="storeOrderPickupBtn"]')
+export const orderPickup =('//button[@test-data="storeOrderPickupBtn"]')
