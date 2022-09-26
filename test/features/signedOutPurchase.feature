@@ -1,7 +1,7 @@
 
 @regression @search
-Feature: A signed out user purchases item(s) from a designated store and verifies that the order is successfully sent.
-        Scenario: Verify that Google is opened and cricinfo is searched
+Feature: A user purchases items from a store
+        Scenario:  A signed out user purchases item(s) from a designated store and verifies that the order is successfully sent.
 
         Given User opens the Open market application and confirms that he is not signed in
         Then User locates the store they wish to purchase from and opens it
