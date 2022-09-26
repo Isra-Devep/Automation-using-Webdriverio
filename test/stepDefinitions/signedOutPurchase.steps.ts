@@ -11,7 +11,7 @@ import assert from 'soft-assert';
 
 let priceOfItem1,priceOfItem2,totalBill
     
-Given ('User opens the Open market application and confirms that he is not signed in', async() =>
+Given ('User opens the One market application and confirms that he is not signed in', async() =>
 {
     browser.url(credentials.baseURL)
     await basePageActions.checkSignInStatus();
