@@ -21,5 +21,6 @@ export async function checkSignInStatus() {
 }
 
 export async function openStorePage(storeName) {
-  await (await locators.merchantStore(storeName)).click();
+  const el= await locators.merchantStore(storeName);
+  await el.click();
 }

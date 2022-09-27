@@ -44,11 +44,11 @@ export async function openOrderSummary(
   console.log(taxAmount.substring(taxAmount.indexOf("$") + 1));
 
   let totalbBillCalculated =
-    (await Math.round(
+     Math.round(
       (await (subTotalCalculated +
         credentials.Store.tipGiven +
         Number(taxAmount.substring(taxAmount.indexOf("$") + 1)))) * 100
-    )) / 100;
+    ) / 100;
   console.log("total calculated is " + totalbBillCalculated);
   let actualTotalBillPromise = await commonActions.getAttribute(
     locators.totalPrice,
@@ -61,7 +61,7 @@ export async function openOrderSummary(
     Number(totalbBillCalculated),
     "totals dont match"
   );
-  return await actualTotalBill;
+  return actualTotalBill;
 }
 
 export async function continueToPayment() {
