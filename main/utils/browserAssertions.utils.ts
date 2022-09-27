@@ -1,10 +1,11 @@
-import assert from 'soft-assert';
-import assertion from 'assert';
+import assert from "soft-assert";
+import assertion from "assert";
+
 export async function verifyElementIsDisplayed(
   element,
   errorMessage: string,
   isLast?: boolean
-) { 
+) {
   let status = await element.isDisplayed();
   assert.softTrue(status, errorMessage);
   if (isLast) assert.softAssertAll();
@@ -51,7 +52,7 @@ export async function verifyElementIsClickable(
   errorMessage: string,
   isLast?: boolean
 ) {
-  let status = await element.isClickable()
+  let status = await element.isClickable();
   assert.softTrue(status, errorMessage);
   if (isLast) assert.softAssertAll();
 }
@@ -84,12 +85,13 @@ export function verifyElementsNotMatches(
 
 export async function verifyIfSpecificElementIsPresent(
   // elementsList,: string | number | string[] | number[],
-  elementsList, expectedValue,
+  elementsList,
+  expectedValue,
   // expectedValue: string | number,
   errorMessage: string,
   isLast?: boolean
 ) {
-  assert.softContains(elementsList,expectedValue,errorMessage, []);
+  assert.softContains(elementsList, expectedValue, errorMessage, []);
   if (isLast) assert.softAssertAll();
 }
 

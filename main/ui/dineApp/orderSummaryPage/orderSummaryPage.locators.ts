@@ -1,3 +1,3 @@
-export let totalPrice='//div[@test-data]';
-export let hamburgerMenu =('//button[@aria-label="open drawer"]');
-export let phoneNumberField =$(`//input[@class="phoneInput form-control"]`);
+export const totalPrice='//div[@test-data]';
+export const hamburgerMenu =('//button[@aria-label="open drawer"]');
+export const phoneNumberField =$(`//input[@class="phoneInput form-control"]`);
