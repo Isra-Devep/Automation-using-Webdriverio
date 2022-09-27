@@ -27,6 +27,6 @@ export async function confirmPayment()
 {
     await locators.creditCardSelection.waitForExist();
     console.log("waited")
-    await locators.placeOrderBtn.click();
+    await locators.placeOrderBtn.click()
     console.log("payment done")
 }
