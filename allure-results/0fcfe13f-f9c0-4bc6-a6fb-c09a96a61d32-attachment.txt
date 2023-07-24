@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//input[@aria-describedby=':r5:-helper-text']"
+}

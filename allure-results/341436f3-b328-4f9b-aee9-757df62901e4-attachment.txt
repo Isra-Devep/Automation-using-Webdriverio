@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//li[@data-value='ACTIVE']\"}\n  (Session info: chrome=114.0.5735.199)",
+  "stacktrace": "Backtrace:\n\tGetHandleVerifier [0x00D8A813+48355]\n\t(No symbol) [0x00D1C4B1]\n\t(No symbol) [0x00C25358]\n\t(No symbol) [0x00C509A5]\n\t(No symbol) [0x00C50B3B]\n\t(No symbol) [0x00C7E232]\n\t(No symbol) [0x00C6A784]\n\t(No symbol) [0x00C7C922]\n\t(No symbol) [0x00C6A536]\n\t(No symbol) [0x00C482DC]\n\t(No symbol) [0x00C493DD]\n\tGetHandleVerifier [0x00FEAABD+2539405]\n\tGetHandleVerifier [0x0102A78F+2800735]\n\tGetHandleVerifier [0x0102456C+2775612]\n\tGetHandleVerifier [0x00E151E0+616112]\n\t(No symbol) [0x00D25F8C]\n\t(No symbol) [0x00D22328]\n\t(No symbol) [0x00D2240B]\n\t(No symbol) [0x00D14FF7]\n\tBaseThreadInitThunk [0x76E27D59+25]\n\tRtlInitializeExceptionChain [0x77A5B79B+107]\n\tRtlClearBits [0x77A5B71F+191]\n"
+}

@@ -1,0 +1,9 @@
+{
+  "script": "return ((arg) => arg.click()).apply(null, arguments)",
+  "args": [
+    {
+      "element-6066-11e4-a52e-4f735466cecf": "A7CCE3823910DD5BE47D27FADA544152_element_7",
+      "ELEMENT": "A7CCE3823910DD5BE47D27FADA544152_element_7"
+    }
+  ]
+}

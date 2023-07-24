@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//div[@test-id='product-status']//div[@role='button']"
+}
