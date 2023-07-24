@@ -1,3 +1,2 @@
-node_modules
-.tmp
-driver-logs
+wdio+Js/allure-results
+wdio+Js/node_modules

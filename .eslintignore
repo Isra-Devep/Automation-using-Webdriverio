@@ -1,0 +1,13 @@
+/lambda/
+/scripts
+/config
+.history
+public
+dist
+.umi
+mock
+src/hooks/models/*
+skeleton.tsx
+
+src/services/ktt_common
+src/services/1m_common

@@ -1,1 +1,0 @@
-export const orderPickup =('//button[@test-data="storeOrderPickupBtn"]')
