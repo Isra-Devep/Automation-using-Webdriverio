@@ -1,15 +1,10 @@
 import * as locators from "./productsPage.locators";
 import * as commonActions from "../../utils/browserActions.utils";
-import * as assertions from "../../utils/browserAssertions.utils"
 
 
-export async function checkIfProductPageIsOpen()
+
+export async function addNewProductItem()
 {
-    await assertions.verifyElementsMatches(locators.pageHeading, "Add a product","heading is "+locators.pageHeading);
-}
-
-export async function addNewItem()
-{
-    await commonActions.click(locators.newProductBtn)
+    await commonActions.click(locators.getNewProductBtn)
     browser.pause(3000);
 }

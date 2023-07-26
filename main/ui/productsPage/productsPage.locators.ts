@@ -1,2 +1,2 @@
-export let pageHeading= '//h1'; 
-export let newProductBtn= '//a[@href="/product/create"]';
+export const getPageHeading= '//h1'; 
+export const getNewProductBtn= '//a[@href="/product/create"]';

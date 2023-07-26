@@ -1,3 +1,3 @@
-export let phoneNumberField = $('//input[@name="phone"]');
-export let passCodeField = $('//input[@name="code"]');
-export let loginBtn = ('//button');
+export const getPhoneNumberField = $('//input[@name="phone"]');
+export const getPassCodeField = $('//input[@name="code"]');
+export const getLoginBtn = ('//button');

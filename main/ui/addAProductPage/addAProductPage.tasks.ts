@@ -1,11 +1,7 @@
 import * as locators from "./addAProductPage.locator";
 import * as commonActions from "../../utils/browserActions.utils";
-import * as assertions from "../../utils/browserAssertions.utils"
 
-export async function checkIfAddAProductPageIsOpen ()
-{
-    await assertions.verifyElementsMatches(locators.pageHeading, "Add a product","heading is "+locators.pageHeading);
-}
+
 
 export async function addProductInfo (status,name,description,stock,price,photo)
 {  
@@ -17,16 +13,16 @@ export async function addProductInfo (status,name,description,stock,price,photo)
       // await commonActions.click(await locators.setStatus(status));
 
        //set name
-       await commonActions.sendKeysToElement($(locators.productName),name)
+       await commonActions.sendKeysToElement($(locators.getProductName),name)
        
        //set description
-       await commonActions.sendKeysToElement($(locators.productDescription),description)
+       await commonActions.sendKeysToElement($(locators.getProductDescription),description)
        
        //set Stock
-       await commonActions.sendKeysToElement($(locators.stockInput),stock)
+       await commonActions.sendKeysToElement($(locators.getStockInput),stock)
        
        //set Price
-       await commonActions.sendKeysToElement($(locators.priceInput),price)
+       await commonActions.sendKeysToElement($(locators.getPriceInput),price)
 
        //set Picture
     //    const remoteFilePath = browser.uploadFile(photo);
@@ -34,7 +30,7 @@ export async function addProductInfo (status,name,description,stock,price,photo)
     //    await $(locators.imageUploadBtn).setValue(await remoteFilePath); 
 
 }
-export async function saveinfo ()
+export async function saveProductInfo ()
 {
-       await commonActions.click(locators.addBtn)
+       await commonActions.click(locators.getAddBtn)
 }

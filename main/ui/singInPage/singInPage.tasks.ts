@@ -7,7 +7,7 @@ import * as commonActions from "../../utils/browserActions.utils";
 export async function checkSignInStatus()
 {
     let buttonText;
-    buttonText = await $(locators.loginBtn).getText();
+    buttonText = await $(locators.getLoginBtn).getText();
     if (buttonText == "Login") {
     return true;
     } else {
@@ -16,11 +16,11 @@ export async function checkSignInStatus()
     }
 }
 
-export async function logIn(phoneNumber,passCode)
+export async function logInToVia(phoneNumber,passCode)
 {
-   await commonActions.sendKeysToElement(locators.phoneNumberField, phoneNumber);
-   await commonActions.sendKeysToElement(locators.passCodeField,passCode);
-   await commonActions.click(locators.loginBtn)
+   await commonActions.sendKeysToElement(locators.getPhoneNumberField, phoneNumber);
+   await commonActions.sendKeysToElement(locators.getPassCodeField,passCode);
+   await commonActions.click(locators.getLoginBtn)
 }
 
 
