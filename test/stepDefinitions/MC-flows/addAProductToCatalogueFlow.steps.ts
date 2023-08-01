@@ -1,6 +1,7 @@
 import { Given, Then, When } from "@cucumber/cucumber";
-import credentials from "../../../main/Test-Data/config/signInCredentials.json";
-import * as singInPageActions from "../../../main/ui/singInPage/singInPage.tasks";
+import credentials from "../../../main/Test-Data/config/MCconfigs/signInCredentials.json";
+import productVariables from "../../../main/Test-Data/config/MCconfigs/addAProductVariables.json";
+import * as singInPageActions from "../../../main/ui/staffSignInPage/staffSignInPage.tasks";
 import * as myStorePageActions from "../../../main/ui/myStorePage/myStorePage.tasks";
 import * as myStorePageAssertions from "../../../main/ui/myStorePage/myStorePage.assertions";
 import * as productPageActions from "../../../main/ui/productsPage/productsPage.tasks";
@@ -43,7 +44,7 @@ async() =>{
 })
 When ("The user adds the product info",
 async()=> {
-    await addAProductPageActions.addProductInfo(credentials.addActiveProduct.Status,credentials.addActiveProduct.Name,credentials.addActiveProduct.Description,credentials.addActiveProduct.Stock,credentials.addActiveProduct.Price,credentials.addActiveProduct.productPhotoPath);
+    await addAProductPageActions.addProductInfo(productVariables.addActiveProduct.Status,productVariables.addActiveProduct.Name,productVariables.addActiveProduct.Description,productVariables.addActiveProduct.Stock,productVariables.addActiveProduct.Price,productVariables.addActiveProduct.productPhotoPath);
 })
 Then ("The user will be able to add the product to the catalogue",
 async() => {

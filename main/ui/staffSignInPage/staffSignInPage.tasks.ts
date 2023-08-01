@@ -1,4 +1,4 @@
-import * as locators from "../singInPage/signInPage.locators";
+import * as locators from "./staffSignInPage.locators";
 import * as commonActions from "../../utils/browserActions.utils";
 
 
