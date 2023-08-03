@@ -1,6 +1,7 @@
 import * as locators from "./dropPage.locators";
 import * as assertions from "../../utils/browserAssertions.utils";
-let items;
+import * as commonAssertions from "../../utils/browserAssertions.utils";
+
 
 export async function checkIfDropIsOpen()
 {
@@ -9,18 +10,11 @@ export async function checkIfDropIsOpen()
 export async function checkIfItemsCanBeBought()
 {
     for (const element of await locators.getAddItemsBtn)
-        {
-            await assertions.verifyElementIsClickable(element,"item cant be bought")
-        }
+        {await assertions.verifyElementIsClickable(element,"item cant be bought")}
 }
 
-export async function checkIfCartIsUpdatedCorrectlyWhenAllItemsAddedOnce()
-{   items=0;
+export async function checkIfCartIsUpdatedCorrectlyWhenAllItemsAddedOnce(timesPurchased)
+{   
     const cartCount = parseInt(await $(locators.getViewCartBtn).getText());
-    for (const element of await locators.getAddItemsBtn)
-        {
-            items=items+1;
-            console.log("item variables value is now "+ items)
-        }
-    await expect(cartCount).toHaveValue(items); //done till here.
-}  skt 
+    await commonAssertions.hardAssertElementMatchValue(cartCount,timesPurchased)
+}  

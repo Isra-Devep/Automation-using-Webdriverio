@@ -1,6 +1,13 @@
 import assert from "soft-assert";
 import assertion from "assert";
 
+
+export async function hardAssertElementMatchValue (
+  element, 
+  expectedValue){
+    await expect(element).toEqual(expectedValue);
+  }
+
 export async function verifyElementIsDisplayed(
   element,
   errorMessage: string,
