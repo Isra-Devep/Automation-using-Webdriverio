@@ -23,7 +23,7 @@ async() =>{
 Then ("The user confirms that the drop is open and the order can be placed.",
 async() =>{
     await dropPageAssertions.checkIfDropIsOpen();
-    //await dropPageAssertions.checkIfItemsCanBeBought();
+    await dropPageAssertions.checkIfItemsCanBeBought();
 });
 
 When ("The user adds the items with no variants to the cart and confirms that the cart is updated",

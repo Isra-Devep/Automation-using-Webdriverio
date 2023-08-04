@@ -19,7 +19,7 @@ export async function openDeliveryMethod()
 export async function openPaymentMethod()
 {
     await commonActions.click(locators.getPaymentMethodBtn);
-    await browser.pause(15000);
+    await browser.pause(3000);
     (await $(locators.getPayPalConfirmationLabel)).waitForExist();
 }
 

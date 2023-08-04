@@ -9,8 +9,7 @@ export async function checkIfDropIsOpen()
 }
 export async function checkIfItemsCanBeBought()
 {
-    for (const element of await locators.getAddItemsBtn)
-        {await assertions.verifyElementIsClickable(element,"item cant be bought")}
+    await assertions.verifyElementIsClickable($(locators.getAddItemsBtn),"item cant be bought")
 }
 
 export async function checkIfCartIsUpdatedCorrectlyWhenAllItemsAddedOnce(timesPurchased)
