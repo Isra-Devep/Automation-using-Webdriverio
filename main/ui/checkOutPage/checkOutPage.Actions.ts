@@ -23,7 +23,7 @@ export async function openShippingMethod()
 
 export async function confirmShippingAddress()
 {
-    await commonActions.click(locators.getDeliveryAndPaymentConfirmBtn);
+    await commonActions.click(locators.getDeliveryAndPaymentConfirmBtn)
 }
 export async function openPaymentMethod()
 {

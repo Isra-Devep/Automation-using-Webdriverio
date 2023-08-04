@@ -15,7 +15,7 @@ Feature: A user wants to make a purchase from the application.
                 # When The user adds a new debit card
                 # Then The card is automatically selected
                 When The user clicks Submit Order button, the order is submitted
-                Then The user can verify that the details of the order submission are correct
+                Then The user can verify that the details of the order submission are correct for pickup order
         
         # Scenario 2:
         Scenario:  A Signed-in user purchases an item(s) from a drop using Shipping Mode. 
@@ -34,4 +34,4 @@ Feature: A user wants to make a purchase from the application.
                 # When The user adds a new debit card
                 # Then The card is automatically selected
                 When The user clicks Submit Order button, the order is submitted
-                Then The user can verify that the details of the order submission are correct
+                Then The user can verify that the details of the order submission are correct for shipping order

@@ -16,9 +16,10 @@ export async function selectPickUpLocation()
 export async function addShippingLocation(fullName,phoneNumber,address,aptSuiteUnit,city,state,zipcode)
 {   
     await commonActions.click(locators.getAddANewShippingAddress);
-    await commonActions.sendKeysToElement(locators.getFullNameField,fullName);
-    await commonActions.sendKeysToElement(locators.getPhoneNumberField,phoneNumber);
+    //await commonActions.sendKeysToElement(locators.getFullNameField,fullName);
+    //await commonActions.sendKeysToElement(locators.getPhoneNumberField,phoneNumber);
     await commonActions.sendKeysToElement(locators.getAddressField,address);
+    await browser.keys('\uE00C');
     await commonActions.sendKeysToElement(locators.getAptSuiteUnitField,aptSuiteUnit);
     await commonActions.sendKeysToElement(locators.getCityField,city);
     await commonActions.sendKeysToElement(locators.getStateField,state);

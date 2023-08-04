@@ -6,13 +6,13 @@ import {round} from 'lodash';
 let subtotalExtracted,
     taxesExtracted,
     totalExtracted,
-    ShippingFeeExtracted,
+    shippingFeeExtracted,
     subtotalCalculated,
     taxesCalculated,
     preShippingTotalCalculated
 
 
- export async function confirmCartEntryValues()
+ export async function confirmCartEntryValuesForPickupOrder()
  {  
     subtotalExtracted=await checkOutPageActions.extractValue(locators.getFinalSubtotal);
     taxesExtracted= await checkOutPageActions.extractValue(locators.getFinalTaxes);
@@ -23,4 +23,20 @@ let subtotalExtracted,
     await commonAssertions.hardAssertElementMatchValue(subtotalExtracted,subtotalCalculated);
     await commonAssertions.hardAssertElementMatchValue(taxesExtracted,taxesCalculated);
     await commonAssertions.hardAssertElementMatchValue (totalExtracted,preShippingTotalCalculated);
+ }
+
+ export async function confirmCartEntryValuesForShippingOrder(shippingFee)
+ {
+    subtotalExtracted=await checkOutPageActions.extractValue(locators.getFinalSubtotal);
+    taxesExtracted= await checkOutPageActions.extractValue(locators.getFinalTaxes);
+    shippingFeeExtracted= await checkOutPageActions.extractValue(locators.getFinalShippingFee); 
+    totalExtracted=await checkOutPageActions.extractValue(locators.getFinalTotal);
+    subtotalCalculated=await (customerDropPurchaseConfig.dropWithNoVariantItems.instancePurchasedInShippingModeWithShippingFee*customerDropPurchaseConfig.dropWithNoVariantItems.pricePerItem);
+    taxesCalculated=await round((subtotalCalculated*customerDropPurchaseConfig.dropWithNoVariantItems.taxForZipCode90021),2);
+    preShippingTotalCalculated=await taxesCalculated+subtotalCalculated
+    await commonAssertions.hardAssertElementMatchValue(subtotalExtracted,subtotalCalculated);
+    await commonAssertions.hardAssertElementMatchValue(taxesExtracted,taxesCalculated);
+    await commonAssertions.hardAssertElementMatchValue(shippingFeeExtracted,shippingFee);
+    await commonAssertions.hardAssertElementMatchValue (totalExtracted,(preShippingTotalCalculated+shippingFeeExtracted));
+
  }

@@ -9,6 +9,7 @@ import * as checkOutPageAssertions from "../../../main/ui/checkOutPage/checkOutP
 import * as checkOutPageActions from "../../../main/ui/checkOutPage/checkOutPage.Actions";
 import * as checkOutPageTasks from "../../../main/ui/checkOutPage/checkOutPage.tasks";
 import * as orderPlacedPageTasks from "../../../main/ui/orderPlacedPage/orderPlacedPage.tasks";
+import * as orderPlacedPageAssertions from "../../../main/ui/orderPlacedPage/orderPlacedPage.assertions"
 import * as customerShippingAddressConfig from "../../../main/Test-Data/config/customerConfigs/customerShippingAddressDetails.json"
 
 
@@ -79,7 +80,7 @@ async()=>{
 Then ("The bill changes and Shipping Fee is added",
 async()=>
 {   
-    await checkOutPageAssertions.confirmCartEntryNewValues();
+    await checkOutPageAssertions.confirmCartEntryNewValues(dropPurchasingCredentials.dropWithNoVariantItems.shippingFee);
 });
 
 When ("The user clicks on the How you'll pay button", 
@@ -97,8 +98,14 @@ async()=>{
     await checkOutPageActions.submitOrder()
 });
 
-Then ("The user can verify that the details of the order submission are correct",
-async()=>
-{
+Then ("The user can verify that the details of the order submission are correct for pickup order",
+async()=>{
     await orderPlacedPageTasks.verifyOrderSubmissionDetails(); 
+    await orderPlacedPageAssertions.confirmCartEntryValuesForPickupOrder();
 });
+
+Then ("The user can verify that the details of the order submission are correct for shipping order",
+async()=>{
+    await orderPlacedPageTasks.verifyOrderSubmissionDetails(); 
+    await orderPlacedPageAssertions.confirmCartEntryValuesForShippingOrder(dropPurchasingCredentials.dropWithNoVariantItems.shippingFee);
+})
