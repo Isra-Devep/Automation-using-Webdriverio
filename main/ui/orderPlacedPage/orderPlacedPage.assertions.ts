@@ -17,7 +17,7 @@ let subtotalExtracted,
     subtotalExtracted=await checkOutPageActions.extractValue(locators.getFinalSubtotal);
     taxesExtracted= await checkOutPageActions.extractValue(locators.getFinalTaxes);
     totalExtracted=await checkOutPageActions.extractValue(locators.getFinalTotal);
-    subtotalCalculated=await (customerDropPurchaseConfig.dropWithNoVariantItems.instancePurchased*customerDropPurchaseConfig.dropWithNoVariantItems.pricePerItem);
+    subtotalCalculated=await (customerDropPurchaseConfig.dropWithNoVariantItems.instancePurchasedInPickUpMode*customerDropPurchaseConfig.dropWithNoVariantItems.pricePerItem);
     taxesCalculated=await round((subtotalCalculated*customerDropPurchaseConfig.dropWithNoVariantItems.taxGeneral),2);
     preShippingTotalCalculated=await taxesCalculated+subtotalCalculated
     await commonAssertions.hardAssertElementMatchValue(subtotalExtracted,subtotalCalculated);

@@ -9,6 +9,7 @@ import * as checkOutPageAssertions from "../../../main/ui/checkOutPage/checkOutP
 import * as checkOutPageActions from "../../../main/ui/checkOutPage/checkOutPage.Actions";
 import * as checkOutPageTasks from "../../../main/ui/checkOutPage/checkOutPage.tasks";
 import * as orderPlacedPageTasks from "../../../main/ui/orderPlacedPage/orderPlacedPage.tasks";
+import * as customerShippingAddressConfig from "../../../main/Test-Data/config/customerConfigs/customerShippingAddressDetails.json"
 
 
 
@@ -28,8 +29,8 @@ async() =>{
 
 When ("The user adds the items with no variants to the cart and confirms that the cart is updated",
 async() =>{
-    await dropPageTasks.addingAllDropItemsToCart(dropPurchasingCredentials.dropWithNoVariantItems.instancePurchased);
-    await dropPageAssertions.checkIfCartIsUpdatedCorrectlyWhenAllItemsAddedOnce(dropPurchasingCredentials.dropWithNoVariantItems.instancePurchased);
+    await dropPageTasks.addingAllDropItemsToCart(dropPurchasingCredentials.dropWithNoVariantItems.instancePurchasedInPickUpMode);
+    await dropPageAssertions.checkIfCartIsUpdatedCorrectlyWhenAllItemsAddedOnce(dropPurchasingCredentials.dropWithNoVariantItems.instancePurchasedInPickUpMode);
 });
 
 Then ("The user clicks on the cart button, verifies total bill without shipping fees",
@@ -42,30 +43,60 @@ async() =>{
 Then ("The user clicks on the delivery method and sees all pickup locations",
 async()=>{
     await checkOutPageActions.openDeliveryMethod();
-    
 });
+
+Then ("The user selects the Shipping tab to see all saved addresses",
+async()=>{
+    await checkOutPageActions.openShippingMethod();
+});
+
+Then ("The user adds a new Shipping address",
+async()=>{
+    await checkOutPageTasks.addShippingLocation(customerShippingAddressConfig.createAnAddress.fullName,
+            customerShippingAddressConfig.createAnAddress.phoneNumber,
+            customerShippingAddressConfig.createAnAddress.address,
+            customerShippingAddressConfig.createAnAddress.aptSuitUnit,
+            customerShippingAddressConfig.createAnAddress.city,
+            customerShippingAddressConfig.createAnAddress.State,
+            customerShippingAddressConfig.createAnAddress.zipCode)
+})
 
 When ("The user selects a pickup location and clicks confirm", 
 async()=>{
     await checkOutPageTasks.selectPickUpLocation();
 });
 
+When ("The user confirms that shipping address",
+async () => {
+    await checkOutPageActions.confirmShippingAddress();
+})
+
 Then ("The bill remains the same no Shipping fee is added",
 async()=>{
     await checkOutPageAssertions.confirmCartEntryValues();
 });
+
+Then ("The bill changes and Shipping Fee is added",
+async()=>
+{   
+    await checkOutPageAssertions.confirmCartEntryNewValues();
+});
+
 When ("The user clicks on the How you'll pay button", 
 async()=>{
     await checkOutPageActions.openPaymentMethod();
 });
+
 Then ("The user can select payment method",
 async()=>{
     await checkOutPageTasks.selectPaymentMethod();
 });
+
 When ("The user clicks Submit Order button, the order is submitted",
 async()=>{
     await checkOutPageActions.submitOrder()
 });
+
 Then ("The user can verify that the details of the order submission are correct",
 async()=>
 {

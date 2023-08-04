@@ -8,11 +8,16 @@ export const getDeliveryMethodBtn="//div[@role='tablist']";
 export const getShippingListBtn="//div[@role='tablist']/button[contains(.,'Shipping')]";
 export const getPickUpListBtn="//div[@role='tablist']/button[contains(.,'Pickup')]";
 export const getPayPalConfirmationLabel="//label[contains(.,'PayPal')]";
-export const deliveryAndPaymentConfirmBtn="//button[contains(.,'Confirm')]";
-export const submitOrderBtn="//button[contains(.,'Submit')]";
+export const getDeliveryAndPaymentConfirmBtn="//button[contains(.,'Confirm')]";
+export const getSubmitOrderBtn="//button[contains(.,'Submit')]";
+export const getAddANewShippingAddress="//button[contains(.,'Add a new address')]";
 
-
-export const getFinalSubtotal=("//p[contains(.,'Subtotal')]/parent::div");
-export const getFinalTaxes="//p[contains(.,'Taxes')]/parent::div";
-export const getFinalTotal="//p[contains(.,'Total')]/parent::div";
-export const getFinalShippingFee="//p[contains(.,'Shipping')]/parent::div";
+//Delivery Method fields
+export const getFullNameField=$("//input[@name='contact']");
+export const getPhoneNumberField=$("//input[@name='phone']");
+export const getAddressField=$("//input[@placeholder='e.g. 123 Main St']");
+export const getAptSuiteUnitField=$("//input[@name='address2']");
+export const getCityField=$("//input[@name='city']");
+export const getStateField=$("//input[@name='state']");
+export const getZipCodeField=$("//input[@name='zipcode']");
+export const getSaveBtn="//button[contains(.,'Save')]";

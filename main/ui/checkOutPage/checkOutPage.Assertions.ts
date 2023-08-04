@@ -17,10 +17,15 @@ let subtotalExtracted,
     subtotalExtracted=await checkOutPageActions.extractValue(locators.getSubtotal);
     taxesExtracted= await checkOutPageActions.extractValue(locators.getTaxes);
     totalExtracted=await checkOutPageActions.extractValue(locators.getTotal);
-    subtotalCalculated=await (customerDropPurchaseConfig.dropWithNoVariantItems.instancePurchased*customerDropPurchaseConfig.dropWithNoVariantItems.pricePerItem);
+    subtotalCalculated=await (customerDropPurchaseConfig.dropWithNoVariantItems.instancePurchasedInPickUpMode*customerDropPurchaseConfig.dropWithNoVariantItems.pricePerItem);
     taxesCalculated=await round((subtotalCalculated*customerDropPurchaseConfig.dropWithNoVariantItems.taxGeneral),2);
     preShippingTotalCalculated=await taxesCalculated+subtotalCalculated
     await commonAssertions.hardAssertElementMatchValue(subtotalExtracted,subtotalCalculated);
     await commonAssertions.hardAssertElementMatchValue(taxesExtracted,taxesCalculated);
     await commonAssertions.hardAssertElementMatchValue (totalExtracted,preShippingTotalCalculated);
+ }
+
+ export async function confirmCartEntryNewValues()
+ {
+
  }

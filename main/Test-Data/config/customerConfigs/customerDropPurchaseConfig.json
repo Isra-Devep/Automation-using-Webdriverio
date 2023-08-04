@@ -1,8 +1,12 @@
 {
     "dropWithNoVariantItems": 
     {   "url": "https://release.via.market/ogsupplier/05jb4f5slc",
-        "instancePurchased":3,
+        "instancePurchasedInPickUpMode":3,
+        "instancePurchasedInShippingModeWithShippingFee":5,
+        "instancePurchasedInShippingModeWithNoShippingFee":7,
         "pricePerItem":15,
-        "taxGeneral":0.0963
+        "taxGeneral":0.0963,
+        "shippingFee":50,
+        "taxForZipCode90021":0.095
     }
 }

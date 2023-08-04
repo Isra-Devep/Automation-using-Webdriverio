@@ -16,6 +16,15 @@ export async function openDeliveryMethod()
     (await $(locators.getDeliveryBtn)).waitForExist();
 }
 
+export async function openShippingMethod()
+{
+    await commonActions.click(locators.getShippingListBtn);
+}
+
+export async function confirmShippingAddress()
+{
+    await commonActions.click(locators.getDeliveryAndPaymentConfirmBtn);
+}
 export async function openPaymentMethod()
 {
     await commonActions.click(locators.getPaymentMethodBtn);
@@ -25,6 +34,6 @@ export async function openPaymentMethod()
 
 export async function submitOrder()
 {
-    await commonActions.click(locators.submitOrderBtn);
+    await commonActions.click(locators.getSubmitOrderBtn);
     browser.pause(5000);
 }
