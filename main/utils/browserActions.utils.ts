@@ -11,6 +11,12 @@ let waits = {
   
   let minutes = waits.maxTimeout / 60000;
   let element = "Element";
+
+  export async function removeFieldData(element)
+  { await $(element).click();
+    browser.keys(['Control', 'a']); 
+    browser.keys('Backspace');
+  }
   
   export async function dropDownSelect(dropdownSelector, optionSelector) {
     let dropDown = await dropdownSelector;

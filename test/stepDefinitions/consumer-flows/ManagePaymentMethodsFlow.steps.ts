@@ -2,6 +2,9 @@ import { Given, Then, When } from "@cucumber/cucumber";
 import * as setUpCredentials from "../../../main/Test-Data/config/MCconfigs/signInCredentials.json";
 import * as singInPageActions from "../../../main/ui/staffSignInPage/staffSignInPage.tasks";
 import * as hamburgerMenuSideBarTasks from "../../../main/ui/hamburgerMenuSideBar/hamburgerMenuSideBar.tasks"
+import * as paymentMethodsPageActions from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.actions";
+import * as paymentMethodsPageTasks from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.tasks";
+import * as customerCreditCardInformation from "../../../main/Test-Data/config/customerConfigs/customerCreditDebitCardInformation.json"
 
 
 
@@ -20,4 +23,20 @@ async()=>{
 When ("The user clicks the Payment method button and access the payment methods",
 async()=>{
     await hamburgerMenuSideBarTasks.OpenPaymentMethodsPage();
-});
+}); 
+
+Then ("The user clicks on the Add credit or debit card option",
+async()=>{
+    await paymentMethodsPageActions.openFieldForAddingANewCard();
+}) 
+
+When ("The user adds info for a new visa card and saves it",
+async()=>{
+    await paymentMethodsPageTasks.addANewCreditCard(
+        customerCreditCardInformation.addAVisaCard.cardHolderName,
+        customerCreditCardInformation.addAVisaCard.cardNumber,
+        customerCreditCardInformation.addAVisaCard.expiry,
+        customerCreditCardInformation.addAVisaCard.CVC,
+        customerCreditCardInformation.addAVisaCard.zipCode
+    );
+})
