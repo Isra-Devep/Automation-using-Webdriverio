@@ -2,8 +2,8 @@ import { Given, Then, When } from "@cucumber/cucumber";
 import credentials from "../../../main/Test-Data/config/MCconfigs/signInCredentials.json";
 import productVariables from "../../../main/Test-Data/config/MCconfigs/addAProductVariables.json";
 import * as singInPageActions from "../../../main/ui/staffSignInPage/staffSignInPage.tasks";
-import * as myStorePageActions from "../../../main/ui/myStorePage/myStorePage.tasks";
-import * as myStorePageAssertions from "../../../main/ui/myStorePage/myStorePage.assertions";
+import * as hamburgerMenuSideBarActions from "../../../main/ui/hamburgerMenuSideBar/hamburgerMenuSideBar.tasks";
+import * as hamburgerMenuSideBarAssertions from "../../../main/ui/hamburgerMenuSideBar/hamburgerMenuSideBar.assertions";
 import * as productPageActions from "../../../main/ui/productsPage/productsPage.tasks";
 import * as productPageAssertions from "../../../main/ui/productsPage/productPage.assertions";
 import * as addAProductPageActions from "../../../main/ui/addAProductPage/addAProductPage.tasks";
@@ -24,11 +24,11 @@ async() =>{
 
 Then("Verify the user has signed in",
 async() =>{
-    await myStorePageAssertions.confirmUserIsSignedIn();
+    await hamburgerMenuSideBarAssertions.confirmUserIsSignedIn();
 });
 When("The user opens the Products page from the hamburger menu",
 async() =>{
-    await myStorePageActions.openProductsPage();
+    await hamburgerMenuSideBarActions.openProductsPage();
 });
 Then ("The user will be able to access the products page",
 async() =>{
