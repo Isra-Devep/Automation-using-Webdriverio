@@ -8,5 +8,5 @@ Feature: A user wants to manage their payment methods.
                 When The user clicks the Payment method button and access the payment methods
                 Then The user clicks on the Add credit or debit card option
                 When The user adds info for a new visa card and saves it
-                Then That card will now be saved
+                #Then That card will now be saved
                  

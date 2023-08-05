@@ -1,6 +1,6 @@
 export const getAddANewCreditDebitCardBtn="//button[contains(.,'Add credit/debit card')]";
 export const getAddCardHolderNameButton='//input[@id="outlined-basic"]';
-export const getIFrameForAddingACard='//iframe[@title="Secure card payment input frame"]';
+export const getIFrameForAddingACard=()=>$('//iframe[@title="Secure card payment input frame"]');
     export const getAddCardNumberInputField='//input[@name="cardnumber"]';
     export const getAddCardExpiryInputField='//input[@name="exp-date"]';
     export const getAddCardCVCInputField='//input[@name="cvc"]';

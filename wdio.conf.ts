@@ -31,7 +31,7 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        'test/features/consumer-flows/makeAPurchaseAsACustomerFlow.feature'
+        'test/features/consumer-flows/managePaymentMethodsFlow.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -141,7 +141,7 @@ export const config: Options.Testrunner = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['test/stepDefinitions/consumer-flows/makeAPurchaseAsACustomerFlow.steps.ts'],
+        require: ['test/stepDefinitions/consumer-flows/ManagePaymentMethodsFlow.steps.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
