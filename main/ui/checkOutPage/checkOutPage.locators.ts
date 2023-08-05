@@ -13,8 +13,8 @@ export const getSubmitOrderBtn="//button[contains(.,'Submit')]";
 export const getAddANewShippingAddress="//button[contains(.,'Add a new address')]";
 
 //Delivery Method fields
-export const getFullNameField=$("//input[@name='contact']");
-export const getPhoneNumberField=$("//input[@name='phone']");
+export const getFullNameField="//input[@name='contact']";
+export const getPhoneNumberField="//input[@name='phone']";
 export const getAddressField=$("//input[@placeholder='e.g. 123 Main St']");
 export const getAptSuiteUnitField=$("//input[@name='address2']");
 export const getCityField=$("//input[@name='city']");
