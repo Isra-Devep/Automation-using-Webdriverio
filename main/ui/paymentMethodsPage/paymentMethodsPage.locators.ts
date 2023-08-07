@@ -5,7 +5,15 @@ export const getIFrameForAddingACard=()=>$('//iframe[@title="Secure card payment
     export const getAddCardExpiryInputField='//input[@name="exp-date"]';
     export const getAddCardCVCInputField='//input[@name="cvc"]';
     export const getAddCardZipCodeInputField='//input[@name="postal"]';
-export const getAddCardInfoBtn="//button[(text()='Add')]"
+export const getAddCardInfoBtn="//button[(text()='Add')]";
+
+
+export function checkForCard(cardType,holderName,last4digits)
+{  
+    return (`//div[contains(.,'${holderName}')]/following-sibling::button[@aria-label='Remove ${cardType} credit card with last 4 digits: ${last4digits}']`);
+    
+} 
+
 
 //export const getDeleteDebitCardBtn="//div[contains(.,'hello')]/following-sibling::button[@aria-label="Remove visa credit card with last 4 digits: 4242"]"
 

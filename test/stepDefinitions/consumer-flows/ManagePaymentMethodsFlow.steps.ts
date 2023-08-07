@@ -4,6 +4,7 @@ import * as singInPageActions from "../../../main/ui/staffSignInPage/staffSignIn
 import * as hamburgerMenuSideBarTasks from "../../../main/ui/hamburgerMenuSideBar/hamburgerMenuSideBar.tasks"
 import * as paymentMethodsPageActions from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.actions";
 import * as paymentMethodsPageTasks from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.tasks";
+import * as paymentMethodsAssertions from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.assertions"
 import * as customerCreditCardInformation from "../../../main/Test-Data/config/customerConfigs/customerCreditDebitCardInformation.json"
 
 
@@ -39,4 +40,28 @@ async()=>{
         customerCreditCardInformation.addAVisaCard.CVC,
         customerCreditCardInformation.addAVisaCard.zipCode
     );
+});
+
+Then ("The user will verify the saved card",
+async()=>{
+    await paymentMethodsAssertions.verifyCardExistence(
+        customerCreditCardInformation.addAVisaCard.cardType,
+        customerCreditCardInformation.addAVisaCard.cardHolderName,
+        customerCreditCardInformation.addAVisaCard.last4Digits);
+});
+
+When ("The user deletes that card",
+async()=>{
+    await paymentMethodsPageTasks.deleteASavedCard(
+        customerCreditCardInformation.addAVisaCard.cardType,
+        customerCreditCardInformation.addAVisaCard.cardHolderName,
+        customerCreditCardInformation.addAVisaCard.last4Digits);
+})
+
+Then ("The user will verify the card isn't saved anymore",
+async()=>{
+    await paymentMethodsAssertions.verifyCardDoesNotExist(
+        customerCreditCardInformation.addAVisaCard.cardType,
+        customerCreditCardInformation.addAVisaCard.cardHolderName,
+        customerCreditCardInformation.addAVisaCard.last4Digits);
 })
