@@ -28,6 +28,8 @@ export async function deleteASavedCard(cardType,cardHolderName,last4Digits)
     if ((await $(getDeleteDebitCardBtn)).isExisting())
     {
         await commonActions.click(getDeleteDebitCardBtn);
+        await commonActions.click(locators.getConfirmationToRemoveCardBtn);
+        browser.pause(4000);
     }
 
     else{console.log("card never existed brother, couldn't find "+getDeleteDebitCardBtn)}

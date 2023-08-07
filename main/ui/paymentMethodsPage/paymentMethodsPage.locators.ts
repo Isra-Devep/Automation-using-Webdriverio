@@ -6,7 +6,7 @@ export const getIFrameForAddingACard=()=>$('//iframe[@title="Secure card payment
     export const getAddCardCVCInputField='//input[@name="cvc"]';
     export const getAddCardZipCodeInputField='//input[@name="postal"]';
 export const getAddCardInfoBtn="//button[(text()='Add')]";
-
+export const getConfirmationToRemoveCardBtn="//button[(text()='Confirm')]"
 
 export function checkForCard(cardType,holderName,last4digits)
 {  
