@@ -2,15 +2,15 @@ import { Given, Then, When } from "@cucumber/cucumber";
 import * as dropPageAssertions from "../../../main/ui/dropPage/dropPage.assertions"; 
 import * as dropPageTasks from "../../../main/ui/dropPage/dropPage.tasks"
 import * as dropPageActions from "../../../main/ui/dropPage/dropPage.Action";
-import * as setUpCredentials from "../../../main/Test-Data/config/MCconfigs/signInCredentials.json";
+import * as setUpCredentials from "../../../main/testData/config/MCconfigs/signInCredentials.json";
 import * as singInPageActions from "../../../main/ui/staffSignInPage/staffSignInPage.tasks";
-import * as dropPurchasingCredentials from "../../../main/Test-Data/config/customerConfigs/customerDropPurchaseConfig.json";
+import * as dropPurchasingCredentials from "../../../main/testData/config/customerConfigs/customerDropPurchaseConfig.json";
 import * as checkOutPageAssertions from "../../../main/ui/checkOutPage/checkOutPage.Assertions";
 import * as checkOutPageActions from "../../../main/ui/checkOutPage/checkOutPage.Actions";
 import * as checkOutPageTasks from "../../../main/ui/checkOutPage/checkOutPage.tasks";
 import * as orderPlacedPageTasks from "../../../main/ui/orderPlacedPage/orderPlacedPage.tasks";
 import * as orderPlacedPageAssertions from "../../../main/ui/orderPlacedPage/orderPlacedPage.assertions"
-import * as customerShippingAddressConfig from "../../../main/Test-Data/config/customerConfigs/customerShippingAddressDetails.json"
+import * as customerShippingAddressConfig from "../../../main/testData/config/customerConfigs/customerShippingAddressDetails.json"
 
 
 

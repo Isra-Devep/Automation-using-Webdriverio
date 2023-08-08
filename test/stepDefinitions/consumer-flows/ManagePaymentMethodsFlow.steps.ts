@@ -1,11 +1,11 @@
 import { Given, Then, When } from "@cucumber/cucumber";
-import * as setUpCredentials from "../../../main/Test-Data/config/MCconfigs/signInCredentials.json";
+import * as setUpCredentials from "../../../main/testData/config/MCconfigs/signInCredentials.json";
 import * as singInPageActions from "../../../main/ui/staffSignInPage/staffSignInPage.tasks";
 import * as hamburgerMenuSideBarTasks from "../../../main/ui/hamburgerMenuSideBar/hamburgerMenuSideBar.tasks"
 import * as paymentMethodsPageActions from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.actions";
 import * as paymentMethodsPageTasks from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.tasks";
 import * as paymentMethodsAssertions from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.assertions"
-import * as customerCreditCardInformation from "../../../main/Test-Data/config/customerConfigs/customerCreditDebitCardInformation.json"
+import * as customerCreditCardInformation from "../../../main/testData/config/customerConfigs/customerCreditDebitCardInformation.json"
 
 
 
