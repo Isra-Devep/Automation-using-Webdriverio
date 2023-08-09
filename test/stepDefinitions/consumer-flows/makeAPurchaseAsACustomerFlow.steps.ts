@@ -25,15 +25,23 @@ async() =>{
 Then ("The user confirms that the drop is open and the order can be placed.",
 async() =>{
     await dropPageAssertions.checkIfDropIsOpen();
-    await dropPageAssertions.checkIfItemsCanBeBought();
+    await dropPageAssertions.checkIfItemsCanBeBought(dropPurchasingCredentials.dropWithNoVariantItems.firstItemName);
+    await dropPageAssertions.checkIfItemsCanBeBought(dropPurchasingCredentials.dropWithNoVariantItems.firstItemName);
 });
 
 When ("The user adds the items with no variants to the cart and confirms that the cart is updated",
 async() =>{
-    await dropPageTasks.addingAllDropItemsToCart(dropPurchasingCredentials.dropWithNoVariantItems.instancePurchasedInPickUpMode);
+    await dropPageTasks.addingAllDropItemsToCart(dropPurchasingCredentials.dropWithNoVariantItems.firstItemName,dropPurchasingCredentials.dropWithNoVariantItems.instancePurchasedInPickUpMode);
+    await dropPageTasks.addingAllDropItemsToCart(dropPurchasingCredentials.dropWithNoVariantItems.firstItemName,dropPurchasingCredentials.dropWithNoVariantItems.instancePurchasedInPickUpMode);
     await dropPageAssertions.checkIfCartIsUpdatedCorrectlyWhenAllItemsAddedOnce(dropPurchasingCredentials.dropWithNoVariantItems.instancePurchasedInPickUpMode);
 });
 
+When ("The user adds the items with variants to the cart and confirms that the cart is updated",
+async() =>{
+    await dropPageTasks.addingAllDropItemsToCart(dropPurchasingCredentials.dropWithItemsWithVariants.firstItemName,dropPurchasingCredentials.dropWithItemsWithVariants.instancePurchasedInPickUpMode,dropPurchasingCredentials.dropWithItemsWithVariants);
+    await dropPageTasks.addingAllDropItemsToCart(dropPurchasingCredentials.dropWithItemsWithVariants.secondItemName,dropPurchasingCredentials.dropWithItemsWithVariants.instancePurchasedInPickUpMode,dropPurchasingCredentials.dropWithItemsWithVariants.firstVariable,dropPurchasingCredentials.dropWithItemsWithVariants.secondVariable);
+    await dropPageAssertions.checkIfCartIsUpdatedCorrectlyWhenAllItemsAddedOnce(dropPurchasingCredentials.dropWithItemsWithVariants.instancePurchasedInPickUpMode*2);
+});
 Then ("The user clicks on the cart button, verifies total bill without shipping fees",
 async() =>{
     await dropPageActions.openCart();

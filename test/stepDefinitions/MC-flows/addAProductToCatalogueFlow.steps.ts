@@ -1,6 +1,6 @@
 import { Given, Then, When } from "@cucumber/cucumber";
-import credentials from "../../../main/Test-Data/config/MCconfigs/signInCredentials.json";
-import productVariables from "../../../main/Test-Data/config/MCconfigs/addAProductVariables.json";
+import credentials from "../../../main/testData/config/MCconfigs/signInCredentials.json";
+import productVariables from "../../../main/testData/config/MCconfigs/addAProductConfig.json";
 import * as singInPageActions from "../../../main/ui/staffSignInPage/staffSignInPage.tasks";
 import * as hamburgerMenuSideBarActions from "../../../main/ui/hamburgerMenuSideBar/hamburgerMenuSideBar.tasks";
 import * as hamburgerMenuSideBarAssertions from "../../../main/ui/hamburgerMenuSideBar/hamburgerMenuSideBar.assertions";

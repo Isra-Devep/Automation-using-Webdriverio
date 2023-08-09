@@ -7,9 +7,9 @@ export async function checkIfDropIsOpen()
 {
     await assertions.verifyElementIsExisting(locators.getViewCartBtn, "drop is closed");
 }
-export async function checkIfItemsCanBeBought()
+export async function checkIfItemsCanBeBought(name)
 {
-    await assertions.verifyElementIsClickable($(locators.getAddItemsBtn),"item cant be bought")
+    await assertions.verifyElementIsClickable($(locators.getAddItemBtn(name)),"item cant be bought")
 }
 
 export async function checkIfCartIsUpdatedCorrectlyWhenAllItemsAddedOnce(timesPurchased)

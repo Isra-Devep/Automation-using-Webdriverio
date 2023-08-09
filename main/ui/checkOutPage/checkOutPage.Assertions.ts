@@ -1,7 +1,7 @@
 import * as locators from "./checkOutPage.locators";
 import * as commonAssertions from "../../utils/browserAssertions.utils"
 import * as checkOutPageActions from "./checkOutPage.Actions";
-import * as customerDropPurchaseConfig from "../../Test-Data/config/customerConfigs/customerDropPurchaseConfig.json"
+import * as customerDropPurchaseConfig from "../../testData/config/customerConfigs/customerDropPurchaseConfig.json"
 import {round} from 'lodash';
 let subtotalExtracted,
     taxesExtracted,

@@ -1,6 +1,23 @@
 {
     "dropWithNoVariantItems": 
-    {   "url": "https://release.via.market/ogsupplier/05jb4f5slc",
+    {   "url": "https://release.via.market/ogsupplier/94aexzu5km",
+        "firstItemName":"Red",
+        "secondItemName":"Blue",
+        "instancePurchasedInPickUpMode":3,
+        "instancePurchasedInShippingModeWithShippingFee":3,
+        "instancePurchasedInShippingModeWithNoShippingFee":7,
+        "pricePerItem":15,
+        "taxGeneral":0.0963,
+        "shippingFee":50,
+        "taxForZipCode90021":0.10244
+    },
+
+    "dropWithItemsWithVariants": 
+    {   "url": "https://release.via.market/ogsupplier/3xgsz0odp0",
+        "firstItemName":"Red",
+        "secondItemName":"Blue",
+        "firstVariable":2,
+        "secondVariable":"light",
         "instancePurchasedInPickUpMode":3,
         "instancePurchasedInShippingModeWithShippingFee":3,
         "instancePurchasedInShippingModeWithNoShippingFee":7,
