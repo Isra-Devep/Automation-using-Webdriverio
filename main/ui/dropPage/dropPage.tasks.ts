@@ -10,7 +10,7 @@ export async function addingAllDropItemsToCart(name,timesPurchased,firstVariance
             {
                 await commonActions.click(locators.getVariantSelection(firstVariance));
                 await commonActions.click(locators.getVariantSelection(secondVariance));
-                for (let i=0;i<(timesPurchased-1);i++)
+                for (let i=0;i<(timesPurchased);i++)
                 {
                     await commonActions.click(locators.getIncreaseQuantityItemDetailPage);
                 }

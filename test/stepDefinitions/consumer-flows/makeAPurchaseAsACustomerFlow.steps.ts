@@ -19,7 +19,7 @@ async() =>{
     await browser.url(setUpCredentials.baseURL);
     await singInPageActions.logInToVia(setUpCredentials.signInCredential.phoneNumber,setUpCredentials.signInCredential.passCode);
     await browser.pause(5000);
-    await browser.url(dropPurchasingCredentials.dropWithNoVariantItems.url);
+    await browser.url(dropPurchasingCredentials.dropWithItemsWithVariants.url);
 }); 
 
 Then ("The user confirms that the drop is open and the order can be placed.",
