@@ -1,5 +1,4 @@
 // import { syncModeDropdownOption } from "@wdio-ui/s3DataPage/s3DataPage.locators";
-
 let waits = {
     maxTimeout: 120000,
     verySmallWait: 2000,
@@ -11,6 +10,12 @@ let waits = {
   
   let minutes = waits.maxTimeout / 60000;
   let element = "Element";
+
+  export async function removeFieldData(element)
+  { await ($(element)).click();
+    await browser.keys(['\uE009', 'a']); 
+    await browser.keys('\uE003');
+  }
   
   export async function dropDownSelect(dropdownSelector, optionSelector) {
     let dropDown = await dropdownSelector;

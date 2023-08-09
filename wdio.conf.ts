@@ -31,7 +31,7 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        'test/features/MC-flows/addAProductToCatalogueFlow.feature'
+        'test/features/consumer-flows/managePaymentMethodsFlow.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -132,13 +132,16 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
+    reporters: ['spec',['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,}]],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['test/stepDefinitions//MC-flows/addAProductToCatalogueFlow.steps.ts'],
+        require: ['test/stepDefinitions/consumer-flows/managePaymentMethodsFlow.steps.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

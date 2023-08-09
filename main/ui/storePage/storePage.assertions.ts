@@ -1,5 +1,5 @@
 import * as assertions from "../../utils/browserAssertions.utils"
-import * as locators from "./myStorePage.locators";
+import * as locators from "./storePage.locators";
 
 
 export async function confirmUserIsSignedIn()

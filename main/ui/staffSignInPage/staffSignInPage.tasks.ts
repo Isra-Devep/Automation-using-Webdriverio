@@ -1,13 +1,9 @@
-import * as locators from "../singInPage/signInPage.locators";
+import * as locators from "./staffSignInPage.locators";
 import * as commonActions from "../../utils/browserActions.utils";
-
-
-
 
 export async function checkSignInStatus()
 {
-    let buttonText;
-    buttonText = await $(locators.getLoginBtn).getText();
+    const buttonText = await $(locators.getLoginBtn).getText();
     if (buttonText == "Login") {
     return true;
     } else {

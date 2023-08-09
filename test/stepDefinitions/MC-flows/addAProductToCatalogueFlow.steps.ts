@@ -1,8 +1,9 @@
 import { Given, Then, When } from "@cucumber/cucumber";
-import credentials from "../../../main/Test-Data/config/signInCredentials.json";
-import * as singInPageActions from "../../../main/ui/singInPage/singInPage.tasks";
-import * as myStorePageActions from "../../../main/ui/myStorePage/myStorePage.tasks";
-import * as myStorePageAssertions from "../../../main/ui/myStorePage/myStorePage.assertions";
+import credentials from "../../../main/Test-Data/config/MCconfigs/signInCredentials.json";
+import productVariables from "../../../main/Test-Data/config/MCconfigs/addAProductVariables.json";
+import * as singInPageActions from "../../../main/ui/staffSignInPage/staffSignInPage.tasks";
+import * as hamburgerMenuSideBarActions from "../../../main/ui/hamburgerMenuSideBar/hamburgerMenuSideBar.tasks";
+import * as hamburgerMenuSideBarAssertions from "../../../main/ui/hamburgerMenuSideBar/hamburgerMenuSideBar.assertions";
 import * as productPageActions from "../../../main/ui/productsPage/productsPage.tasks";
 import * as productPageAssertions from "../../../main/ui/productsPage/productPage.assertions";
 import * as addAProductPageActions from "../../../main/ui/addAProductPage/addAProductPage.tasks";
@@ -23,11 +24,11 @@ async() =>{
 
 Then("Verify the user has signed in",
 async() =>{
-    await myStorePageAssertions.confirmUserIsSignedIn();
+    await hamburgerMenuSideBarAssertions.confirmUserIsSignedIn();
 });
 When("The user opens the Products page from the hamburger menu",
 async() =>{
-    await myStorePageActions.openProductsPage();
+    await hamburgerMenuSideBarActions.openProductsPage();
 });
 Then ("The user will be able to access the products page",
 async() =>{
@@ -43,7 +44,7 @@ async() =>{
 })
 When ("The user adds the product info",
 async()=> {
-    await addAProductPageActions.addProductInfo(credentials.addActiveProduct.Status,credentials.addActiveProduct.Name,credentials.addActiveProduct.Description,credentials.addActiveProduct.Stock,credentials.addActiveProduct.Price,credentials.addActiveProduct.productPhotoPath);
+    await addAProductPageActions.addProductInfo(productVariables.addActiveProduct.Status,productVariables.addActiveProduct.Name,productVariables.addActiveProduct.Description,productVariables.addActiveProduct.Stock,productVariables.addActiveProduct.Price,productVariables.addActiveProduct.productPhotoPath);
 })
 Then ("The user will be able to add the product to the catalogue",
 async() => {
