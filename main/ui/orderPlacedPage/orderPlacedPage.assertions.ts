@@ -1,7 +1,8 @@
 import * as locators from "./orderPlacedPage.locators";
-import * as commonAssertions from "../../utils/browserAssertions.utils"
-import * as customerDropPurchaseConfig from "../../testData/config/customerConfigs/customerDropPurchaseConfig.json"
-import * as checkOutPageActions from "../../ui/checkOutPage/checkOutPage.Actions"
+import * as commonAssertions from "../../utils/browserAssertions.utils";
+import * as customerDropPurchaseConfig from "../../testData/config/customerConfigs/customerDropPurchaseConfig.json";
+import * as checkOutPageActions from "../checkOutPage/checkOutPage.actions";
+import * as dropPurchasingCredentials from "../../../main/testData/config/customerConfigs/customerDropPurchaseConfig.json";
 import {round} from 'lodash';
 let subtotalExtracted,
     taxesExtracted,
@@ -25,8 +26,8 @@ let subtotalExtracted,
     await commonAssertions.hardAssertElementMatchValue (totalExtracted,preShippingTotalCalculated);
  }
 
- export async function confirmCartEntryValuesForShippingOrder(shippingFee)
- {
+ export async function confirmCartEntryValuesForShippingOrder()
+ {  let shippingFee=dropPurchasingCredentials.dropWithNoVariantItems.shippingFee;
     subtotalExtracted=await checkOutPageActions.extractValue(locators.getFinalSubtotal);
     taxesExtracted= await checkOutPageActions.extractValue(locators.getFinalTaxes);
     shippingFeeExtracted= await checkOutPageActions.extractValue(locators.getFinalShippingFee); 

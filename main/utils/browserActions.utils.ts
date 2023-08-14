@@ -25,10 +25,11 @@ let waits = {
     await dropDownOption.click();
   }
   
-  export async function sendKeysToElement(element, text) {
-    await element.click();
-    await element.clearValue();
-    await element.setValue(text);
+  export async function sendKeysToElement(element:string, text) {
+    let elementHandle=$(element);
+    await elementHandle.click();
+    await elementHandle.clearValue();
+    await elementHandle.setValue(text);
   }
   
   export async function click(selector: string, elementName?: string) {

@@ -1,14 +1,16 @@
 import * as locators from "./dropPage.locators";
 import * as assertions from "../../utils/browserAssertions.utils";
 import * as commonAssertions from "../../utils/browserAssertions.utils";
+import * as dropPurchasingCredentials from "../../../main/testData/config/customerConfigs/customerDropPurchaseConfig.json";
+
 
 
 export async function checkIfDropIsOpen()
 {
     await assertions.verifyElementIsExisting(locators.getViewCartBtn, "drop is closed");
 }
-export async function checkIfItemsCanBeBought(name)
-{
+export async function checkIfItemsCanBeBought()
+{   let name=dropPurchasingCredentials.dropWithNoVariantItems.firstItemName
     await assertions.verifyElementIsClickable($(locators.getAddItemBtn(name)),"item cant be bought")
 }
 

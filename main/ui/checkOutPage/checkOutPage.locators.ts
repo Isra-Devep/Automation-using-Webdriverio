@@ -15,9 +15,9 @@ export const getAddANewShippingAddress="//button[contains(.,'Add a new address')
 //Delivery Method fields
 export const getFullNameField="//input[@name='contact']";
 export const getPhoneNumberField="//input[@name='phone']";
-export const getAddressField=$("//input[@placeholder='e.g. 123 Main St']");
-export const getAptSuiteUnitField=$("//input[@name='address2']");
-export const getCityField=$("//input[@name='city']");
-export const getStateField=$("//input[@name='state']");
-export const getZipCodeField=$("//input[@name='zipcode']");
+export const getAddressField=("//input[@placeholder='e.g. 123 Main St']");
+export const getAptSuiteUnitField=("//input[@name='address2']");
+export const getCityField=("//input[@name='city']");
+export const getStateField=("//input[@name='state']");
+export const getZipCodeField=("//input[@name='zipcode']");
 export const getSaveBtn="//button[contains(.,'Save')]";

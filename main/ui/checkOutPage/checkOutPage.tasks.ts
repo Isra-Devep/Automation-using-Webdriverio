@@ -1,6 +1,6 @@
 import * as locators from "./checkOutPage.locators";
 import * as commonActions from "../../utils/browserActions.utils";
-
+import * as customerShippingAddressConfig from "../../../main/testData/config/customerConfigs/customerShippingAddressDetails.json"
 export async function openDeliveryMethod()
 {
     await commonActions.click(locators.getDeliveryBtn);
@@ -13,13 +13,21 @@ export async function selectPickUpLocation()
     await browser.pause(5000);
 }
 
-export async function addShippingLocation(fullName,phoneNumber,address,aptSuiteUnit,city,state,zipcode)
-{   
+export async function addShippingLocation()
+{   customerShippingAddressConfig
+    let fullName=customerShippingAddressConfig.createAnAddress.fullName,
+        phoneNumber=customerShippingAddressConfig.createAnAddress.phoneNumber,
+        address=customerShippingAddressConfig.createAnAddress.address,
+        aptSuiteUnit=customerShippingAddressConfig.createAnAddress.aptSuitUnit,
+        city=customerShippingAddressConfig.createAnAddress.city,
+        state=customerShippingAddressConfig.createAnAddress.State,
+        zipcode=customerShippingAddressConfig.createAnAddress.zipCode
+
     await commonActions.click(locators.getAddANewShippingAddress);
     await commonActions.removeFieldData(locators.getFullNameField);
-    await commonActions.sendKeysToElement($(locators.getFullNameField),fullName);
+    await commonActions.sendKeysToElement((locators.getFullNameField),fullName);
     await commonActions.removeFieldData(locators.getPhoneNumberField);
-    await commonActions.sendKeysToElement($(locators.getPhoneNumberField),phoneNumber);
+    await commonActions.sendKeysToElement((locators.getPhoneNumberField),phoneNumber);
     await commonActions.sendKeysToElement(locators.getAddressField,address);
     await browser.keys('\uE00C');
     await commonActions.sendKeysToElement(locators.getAptSuiteUnitField,aptSuiteUnit);

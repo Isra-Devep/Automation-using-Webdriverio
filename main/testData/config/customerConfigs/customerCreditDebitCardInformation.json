@@ -30,7 +30,7 @@
         "cardType": "amex",
         "cardHolderName":"Automation Card",
         "cardNumber":371449635398431,
-        "last5Digits":8431,
+        "last4Digits":8431,
         "expiry":424,
         "CVC":4245,
         "zipCode":24242

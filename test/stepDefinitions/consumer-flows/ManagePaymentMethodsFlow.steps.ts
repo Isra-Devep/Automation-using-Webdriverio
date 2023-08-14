@@ -1,19 +1,17 @@
 import { Given, Then, When } from "@cucumber/cucumber";
-import * as setUpCredentials from "../../../main/testData/config/MCconfigs/signInCredentials.json";
 import * as singInPageActions from "../../../main/ui/staffSignInPage/staffSignInPage.tasks";
 import * as hamburgerMenuSideBarTasks from "../../../main/ui/hamburgerMenuSideBar/hamburgerMenuSideBar.tasks"
 import * as paymentMethodsPageActions from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.actions";
 import * as paymentMethodsPageTasks from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.tasks";
 import * as paymentMethodsAssertions from "../../../main/ui/paymentMethodsPage/paymentMethodsPage.assertions"
-import * as customerCreditCardInformation from "../../../main/testData/config/customerConfigs/customerCreditDebitCardInformation.json"
+import * as browserSetUpActions from "../../../main/ui/browserSetUp/browserSetUp.actions";
 
 
 
 Given ("The user open the via application and signs in",
 async()=>{
-    await browser.url(setUpCredentials.baseURL);
-    await singInPageActions.logInToVia(setUpCredentials.signInCredential.phoneNumber,setUpCredentials.signInCredential.passCode);
-    await browser.pause(5000);
+    await  browserSetUpActions.setUpBrowser("release");
+    await singInPageActions.logInToVia("customer");
     });
 
 Then ("The user confirms they are in buying mode or enters the buying mode",
@@ -33,35 +31,20 @@ async()=>{
 
 When ("The user adds info for a new visa card and saves it",
 async()=>{
-    await paymentMethodsPageTasks.addANewCreditCard(
-        customerCreditCardInformation.addAVisaCard.cardHolderName,
-        customerCreditCardInformation.addAVisaCard.cardNumber,
-        customerCreditCardInformation.addAVisaCard.expiry,
-        customerCreditCardInformation.addAVisaCard.CVC,
-        customerCreditCardInformation.addAVisaCard.zipCode
-    );
+    await paymentMethodsPageTasks.addANewCreditCard("visa");
 });
 
 Then ("The user will verify the saved card",
 async()=>{
-    await paymentMethodsAssertions.verifyCardExistence(
-        customerCreditCardInformation.addAVisaCard.cardType,
-        customerCreditCardInformation.addAVisaCard.cardHolderName,
-        customerCreditCardInformation.addAVisaCard.last4Digits);
+    await paymentMethodsAssertions.verifyCardExistence("visa");
 });
 
 When ("The user deletes that card",
 async()=>{
-    await paymentMethodsPageTasks.deleteASavedCard(
-        customerCreditCardInformation.addAVisaCard.cardType,
-        customerCreditCardInformation.addAVisaCard.cardHolderName,
-        customerCreditCardInformation.addAVisaCard.last4Digits);
+    await paymentMethodsPageTasks.deleteASavedCard("visa");
 })
 
 Then ("The user will verify the card isn't saved anymore",
 async()=>{
-    await paymentMethodsAssertions.verifyCardDoesNotExist(
-        customerCreditCardInformation.addAVisaCard.cardType,
-        customerCreditCardInformation.addAVisaCard.cardHolderName,
-        customerCreditCardInformation.addAVisaCard.last4Digits);
+    await paymentMethodsAssertions.verifyCardDoesNotExist("visa");
 })

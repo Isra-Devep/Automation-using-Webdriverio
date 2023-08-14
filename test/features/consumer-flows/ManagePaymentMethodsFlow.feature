@@ -1,4 +1,4 @@
-@regression @search
+@regression 
 Feature: A user wants to manage their payment methods.
 
         # Scenario 1:
