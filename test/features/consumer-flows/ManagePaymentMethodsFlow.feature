@@ -10,6 +10,7 @@ Feature: A user wants to manage their payment methods.
                 When The user adds info for a new visa card and saves it
                 Then The user will verify the saved card
 
+
         #Scenario 2:
         Scenario:  A Signed-in user deletes a visa payment method to their account. 
                 Given The user open the via application and signs in
