@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@name=\"phone\"]\"}\n  (Session info: chrome=114.0.5735.199)",
-  "stacktrace": "Backtrace:\n\tGetHandleVerifier [0x0071A813+48355]\n\t(No symbol) [0x006AC4B1]\n\t(No symbol) [0x005B5358]\n\t(No symbol) [0x005E09A5]\n\t(No symbol) [0x005E0B3B]\n\t(No symbol) [0x0060E232]\n\t(No symbol) [0x005FA784]\n\t(No symbol) [0x0060C922]\n\t(No symbol) [0x005FA536]\n\t(No symbol) [0x005D82DC]\n\t(No symbol) [0x005D93DD]\n\tGetHandleVerifier [0x0097AABD+2539405]\n\tGetHandleVerifier [0x009BA78F+2800735]\n\tGetHandleVerifier [0x009B456C+2775612]\n\tGetHandleVerifier [0x007A51E0+616112]\n\t(No symbol) [0x006B5F8C]\n\t(No symbol) [0x006B2328]\n\t(No symbol) [0x006B240B]\n\t(No symbol) [0x006A4FF7]\n\tBaseThreadInitThunk [0x767E7D59+25]\n\tRtlInitializeExceptionChain [0x7790B79B+107]\n\tRtlClearBits [0x7790B71F+191]\n"
-}
