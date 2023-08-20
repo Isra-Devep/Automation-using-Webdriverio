@@ -28,20 +28,22 @@ export function verifyElementIsNotDisplayed(
 }
 
 export async function verifyElementIsExisting(
-  element,
-  errorMessage: string,
+  element:string,
+  errorMessage?: string,
   isLast?: boolean
 ) {
-  assert.softTrue(element, errorMessage);
+
+  await expect($(element)).toBeExisting();
   if (isLast) assert.softAssertAll();
 }
 
-export function verifyElementIsNotExisting(
-  status: boolean,
-  errorMessage: string,
+export async function verifyElementIsNotExisting(
+  element:string,
+  status?: boolean,
+  errorMessage?: string,
   isLast?: boolean
 ) {
-  assert.softTrue(!status, errorMessage);
+  await expect($(element)).not.toBeExisting();
   if (isLast) assert.softAssertAll();
 }
 

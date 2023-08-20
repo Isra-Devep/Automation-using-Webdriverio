@@ -1,8 +1,10 @@
-export const getViewCartBtn= '//button[contains(text(),"View cart")]';
+export const getViewCartBtn= '//button[@aria-label="Shopping"]';
+export const getEndedStatusBtn='//span[contains(.,"Ended")]/parent::div';
 export const getAddToBagBtn="//button[contains(.,'Add to bag')]";
 export const getIncreaseQuantityItemDetailPage='//button[@aria-label="Remove"]/following-sibling::button[@aria-label="Add"]';
 export const getPriceOfItemFromItemDrawer='//span[contains(.,"Sale")]/parent::div/parent::div/parent::div/following-sibling::section/child::div/child::span[@test-id]';
-export const getPriceOfItemFromDrop='//div[contains(.,"Red")]/parent::div/child::div/child::div/span[@test-id]'
+export const getPriceOfItemFromDrop='//div[contains(.,"Red")]/parent::div/child::div/child::div/span[@test-id]';
+export const getCloseProductDrawer='//button[@aria-label="Close"][@variant="contained"]';
 
 export function getAddItemBtn(name)
 {

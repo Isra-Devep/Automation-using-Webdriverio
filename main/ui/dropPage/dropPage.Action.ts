@@ -5,7 +5,7 @@ import * as dropPurchasingCredentials from "../../testData/config/customerConfig
 
 export async function openCart()
 {
-    await commonActions.click(locators.getViewCartBtn)
+    await commonActions.click(locators.getViewCartBtn);
 } 
 export async function openDrop(type)
 {
@@ -13,7 +13,7 @@ export async function openDrop(type)
     {
         await browser.url(dropPurchasingCredentials.dropWithItemsWithVariants.url);
     }
-    else if (type=="drop With NoVarian tItems")
+    else if (type=="drop With No Variant Items")
     {
         await browser.url(dropPurchasingCredentials.dropWithNoVariantItems.url);  
     }

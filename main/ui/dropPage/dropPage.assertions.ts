@@ -7,7 +7,7 @@ import * as dropPurchasingCredentials from "../../../main/testData/config/custom
 
 export async function checkIfDropIsOpen()
 {
-    await assertions.verifyElementIsExisting(locators.getViewCartBtn, "drop is closed");
+    await assertions.verifyElementIsNotExisting(locators.getEndedStatusBtn);
 }
 export async function checkIfItemsCanBeBought()
 {   let name=dropPurchasingCredentials.dropWithNoVariantItems.firstItemName
