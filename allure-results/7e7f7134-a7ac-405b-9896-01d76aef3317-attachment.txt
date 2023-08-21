@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//div[@test-id='skus.0.price']"
-}
