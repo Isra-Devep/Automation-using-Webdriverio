@@ -1,5 +1,5 @@
 import * as locators from "./checkOutPage.locators";
-import * as commonActions from "@wdioUtils/browserActions.utils";
+import * as commonActions from "wdioUtils/browserActions.utils";
 import * as customerShippingAddressConfig from "@wdioTestData/config/customerConfigs/customerShippingAddressDetails.json"
 export async function openDeliveryMethod()
 {

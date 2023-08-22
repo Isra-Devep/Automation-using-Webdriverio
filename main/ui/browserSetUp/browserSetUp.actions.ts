@@ -1,4 +1,4 @@
-import * as envVariables from "@wdioTestData/config/commonConfig/commonConfigs.json";
+import * as envVariables from "wdioTestData/config/commonConfig/commonConfigs.json";
 
 
 

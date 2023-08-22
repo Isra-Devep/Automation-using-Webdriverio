@@ -1,5 +1,5 @@
 import * as locators from "./paymentMethodsPage.locators"
-import * as commonActions from "@wdioUtils/browserActions.utils";
+import * as commonActions from "wdioUtils/browserActions.utils";
 import * as customerCreditCardInformation from "@wdioTestData/config/customerConfigs/customerCreditDebitCardInformation.json";
 import * as paymentMethodsPageAssertions from "./paymentMethodsPage.assertions";
 

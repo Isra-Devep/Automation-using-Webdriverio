@@ -1,5 +1,5 @@
 import * as locators from "./checkOutPage.locators";
-import * as commonActions from "@wdioUtils/browserActions.utils";
+import * as commonActions from "wdioUtils/browserActions.utils";
 let extractedValue, concatenatedText, numericalPart; 
 
 export async function extractValue(element)

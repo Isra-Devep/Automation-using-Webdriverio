@@ -1,15 +1,15 @@
 import { Given, Then, When } from "@cucumber/cucumber";
-import * as dropPageAssertions from "@wdioUi/dropPage/dropPage.assertions"; 
-import * as dropPageTasks from "@wdioUi/dropPage/dropPage.tasks"
-import * as dropPageActions from "@wdioUi/dropPage/dropPage.action";
-import * as singInPageActions from "@wdioUi/staffSignInPage/staffSignInPage.tasks";
-import * as dropPurchasingCredentials from "@wdioTestData/config/customerConfigs/customerDropPurchaseConfig.json";
-import * as checkOutPageAssertions from "@wdioUi/checkOutPage/checkOutPage.assertions";
-import * as checkOutPageActions from "@wdioUi/checkOutPage/checkOutPage.actions";
-import * as checkOutPageTasks from "@wdioUi/checkOutPage/checkOutPage.tasks";
-import * as orderPlacedPageTasks from "@wdioUi/orderPlacedPage/orderPlacedPage.tasks";
-import * as orderPlacedPageAssertions from "@wdioUi/orderPlacedPage/orderPlacedPage.assertions"
-import * as browserSetUpActions from "@wdioUi/browserSetUp/browserSetUp.actions";
+import * as dropPageAssertions from "wdioUi/dropPage/dropPage.assertions"; 
+import * as dropPageTasks from "wdioUi/dropPage/dropPage.tasks";
+import * as dropPageActions from "wdioUi/dropPage/dropPage.action";
+import * as singInPageActions from "wdioUi/staffSignInPage/staffSignInPage.tasks";
+import * as dropPurchasingCredentials from "wdioTestData/config/customerConfigs/customerDropPurchaseConfig.json";
+import * as checkOutPageAssertions from "wdioUi/checkOutPage/checkOutPage.assertions";
+import * as checkOutPageActions from "wdioUi/checkOutPage/checkOutPage.actions";
+import * as checkOutPageTasks from "wdioUi/checkOutPage/checkOutPage.tasks";
+import * as orderPlacedPageTasks from "wdioUi/orderPlacedPage/orderPlacedPage.tasks";
+import * as orderPlacedPageAssertions from "wdioUi/orderPlacedPage/orderPlacedPage.assertions";
+import * as browserSetUpActions from "wdioUi/browserSetUp/browserSetUp.actions";
 
 
 

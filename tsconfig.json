@@ -12,9 +12,9 @@
         ],
         "baseUrl": "main",
         "paths":{
-            "@wdioUi/*":["ui/*"],
-            "@wdioUtils/*":["utils/*"],
-            "@wdioTestData/*":["testData/*"]
+            "wdioUi/*":["ui/*"],
+            "wdioUtils/*":["utils/*"],
+            "wdioTestData/*":["testData/*"]
         },
         "target": "es2022"
     }

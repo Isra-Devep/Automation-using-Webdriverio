@@ -1,5 +1,5 @@
 import * as locators from "./staffSignInPage.locators";
-import * as commonActions from "@wdioUtils/browserActions.utils";
+import * as commonActions from "wdioUtils/browserActions.utils";
 import * as setUpCredentialsMerchant from "@wdioTestData/config/MCconfigs/merchantSignInCredentials.json";
 import * as setUpCredentialsCustomer from "@wdioTestData/config/customerConfigs/customerSignInCredential.json";
 import * as setUpCredentialsReseller from "@wdioTestData/config/resellerConfigs/resellerSignInCredentials.json";

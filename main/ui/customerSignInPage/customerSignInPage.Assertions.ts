@@ -1,5 +1,5 @@
 //import * as credentials from "@wdioTestData/config/customerConfigs/customerSignInCredential.json" 
-// import * as assertions from "@wdioUtils/browserAssertions.utils";
+// import * as assertions from "wdioUtils/browserAssertions.utils";
 
 
 

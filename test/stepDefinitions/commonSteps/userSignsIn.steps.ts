@@ -1,6 +1,6 @@
 import { Given, Then, When } from "@wdio/cucumber-framework";
-import * as browserSetUpActions from "@wdioUi/browserSetUp/browserSetUp.actions"
-import * as singInPageActions from "@wdioUi/staffSignInPage/staffSignInPage.tasks";
+import * as browserSetUpActions from "wdioUi/browserSetUp/browserSetUp.actions"
+import * as singInPageActions from "wdioUi/staffSignInPage/staffSignInPage.tasks";
 
 
 

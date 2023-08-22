@@ -1,6 +1,6 @@
 import * as locators from "./dropPage.locators";
-import * as assertions from "@wdioUtils/browserAssertions.utils";
-import * as commonAssertions from "@wdioUtils/browserAssertions.utils";
+import * as assertions from "wdioUtils/browserAssertions.utils";
+import * as commonAssertions from "wdioUtils/browserAssertions.utils";
 import * as dropPurchasingCredentials from "@wdioTestData/config/customerConfigs/customerDropPurchaseConfig.json";
 
 

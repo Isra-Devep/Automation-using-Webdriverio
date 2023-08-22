@@ -1,5 +1,5 @@
 import * as locators from "./customerSignInPage.locators"
-import * as commonActions from "@wdioUtils/browserActions.utils"
+import * as commonActions from "wdioUtils/browserActions.utils"
 
 
 

@@ -1,4 +1,4 @@
-import * as assertions from "@wdioUtils/browserAssertions.utils"
+import * as assertions from "wdioUtils/browserAssertions.utils"
 import * as locators from "./addAProductPage.locator";
 
 

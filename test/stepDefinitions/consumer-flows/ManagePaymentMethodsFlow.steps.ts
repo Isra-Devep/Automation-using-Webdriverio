@@ -1,10 +1,10 @@
 import { Given, Then, When } from "@cucumber/cucumber";
-import * as singInPageActions from "@wdioUi/staffSignInPage/staffSignInPage.tasks";
-import * as hamburgerMenuSideBarTasks from "@wdioUi/hamburgerMenuSideBar/hamburgerMenuSideBar.tasks"
-import * as paymentMethodsPageActions from "@wdioUi/paymentMethodsPage/paymentMethodsPage.actions";
-import * as paymentMethodsPageTasks from "@wdioUi/paymentMethodsPage/paymentMethodsPage.tasks";
-import * as paymentMethodsAssertions from "@wdioUi/paymentMethodsPage/paymentMethodsPage.assertions"
-import * as browserSetUpActions from "@wdioUi/browserSetUp/browserSetUp.actions";
+import * as singInPageActions from "wdioUi/staffSignInPage/staffSignInPage.tasks";
+import * as hamburgerMenuSideBarTasks from "wdioUi/hamburgerMenuSideBar/hamburgerMenuSideBar.tasks"
+import * as paymentMethodsPageActions from "wdioUi/paymentMethodsPage/paymentMethodsPage.actions";
+import * as paymentMethodsPageTasks from "wdioUi/paymentMethodsPage/paymentMethodsPage.tasks";
+import * as paymentMethodsAssertions from "wdioUi/paymentMethodsPage/paymentMethodsPage.assertions"
+import * as browserSetUpActions from "wdioUi/browserSetUp/browserSetUp.actions";
 
 
 

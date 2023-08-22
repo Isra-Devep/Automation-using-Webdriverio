@@ -1,5 +1,5 @@
 import * as locators from "./addAProductPage.locator";
-import * as commonActions from "@wdioUtils/browserActions.utils";
+import * as commonActions from "wdioUtils/browserActions.utils";
 import productVariables from "@wdioTestData/config/MCconfigs/addAProductConfig.json";
 let status,name,description,stock,price,photo;
 
