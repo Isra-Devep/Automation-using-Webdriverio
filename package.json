@@ -21,7 +21,9 @@
     "@wdio/spec-reporter": "^8.12.1",
     "chromedriver": "^114.0.2",
     "cucumber-html-reporter": "^7.1.1",
+    "module-alias": "^2.2.3",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.6",
     "wdio-chromedriver-service": "^8.1.1",
     "wdio-cucumberjs-json-reporter": "^5.1.6"
@@ -30,7 +32,6 @@
     "-": "^0.0.1",
     "allure-commandline": "^2.23.1",
     "save-dev": "^0.0.1-security",
-    "soft-assert": "^0.2.7",
-    "tsconfig-paths": "^4.2.0"
+    "soft-assert": "^0.2.7"
   }
 }

@@ -2,7 +2,7 @@
     "addActiveProduct": {
     "Status": "ACTIVE",
     "Name": "Automation wdio product",
-    "Description": "This product was added through automation, while presenting POC of the flow",
+    "Description": "This product was added through automation",
     "Stock":55,
     "Price": 200,
     "productPhotoPath": "../uploads/automationProductImage.jpeg"   
