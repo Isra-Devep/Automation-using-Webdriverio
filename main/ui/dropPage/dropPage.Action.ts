@@ -1,6 +1,6 @@
 import * as locators from "./dropPage.locators";
-import * as commonActions from "../../utils/browserActions.utils";
-import * as dropPurchasingCredentials from "../../testData/config/customerConfigs/customerDropPurchaseConfig.json";
+import * as commonActions from "@wdioUtils/browserActions.utils";
+import * as dropPurchasingCredentials from "@wdioTestData/config/customerConfigs/customerDropPurchaseConfig.json";
 
 
 export async function openCart()

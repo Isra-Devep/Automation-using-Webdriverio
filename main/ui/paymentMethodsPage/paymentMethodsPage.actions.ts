@@ -1,5 +1,5 @@
 import * as locators from "./paymentMethodsPage.locators"
-import * as commonActions from "../../utils/browserActions.utils";
+import * as commonActions from "@wdioUtils/browserActions.utils";
 
 
 export async function openFieldForAddingANewCard()

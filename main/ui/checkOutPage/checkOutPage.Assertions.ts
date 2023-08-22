@@ -1,8 +1,8 @@
 import * as locators from "./checkOutPage.locators";
-import * as commonAssertions from "../../utils/browserAssertions.utils";
+import * as commonAssertions from "@wdioUtils/browserAssertions.utils";
 import * as checkOutPageActions from "./checkOutPage.actions";
-import * as customerDropPurchaseConfig from "../../testData/config/customerConfigs/customerDropPurchaseConfig.json";
-import * as dropPurchasingCredentials from "../../testData/config/customerConfigs/customerDropPurchaseConfig.json";
+import * as customerDropPurchaseConfig from "@wdioTestData/config/customerConfigs/customerDropPurchaseConfig.json";
+import * as dropPurchasingCredentials from "@wdioTestData/config/customerConfigs/customerDropPurchaseConfig.json";
 import {round} from 'lodash';
 let subtotalExtracted,
     taxesExtracted,

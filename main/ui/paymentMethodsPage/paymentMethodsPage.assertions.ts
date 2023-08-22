@@ -1,5 +1,5 @@
 import * as locators from "./paymentMethodsPage.locators";
-import * as customerCreditCardInformation from "../../../main/testData/config/customerConfigs/customerCreditDebitCardInformation.json";
+import * as customerCreditCardInformation from "@wdioTestData/config/customerConfigs/customerCreditDebitCardInformation.json";
 let tempHolderName, tempLast4Digits,holderName,last4digits
 
 

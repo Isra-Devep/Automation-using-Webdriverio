@@ -1,5 +1,5 @@
 import * as locators from "./hamburgerMenuSideBar.locators";
-import * as commonActions from "../../utils/browserActions.utils";
+import * as commonActions from "@wdioUtils/browserActions.utils";
 import * as hamburgerMenuSideBarAssertions from "./hamburgerMenuSideBar.assertions";
 
 

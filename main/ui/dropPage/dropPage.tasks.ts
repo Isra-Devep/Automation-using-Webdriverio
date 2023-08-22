@@ -1,5 +1,5 @@
 import * as locators from "./dropPage.locators";
-import * as commonActions from "../../utils/browserActions.utils";
+import * as commonActions from "@wdioUtils/browserActions.utils";
 
 
 export async function addingAllDropItemsToCart(name,timesPurchased,firstVariance?,secondVariance?) 

@@ -1,6 +1,6 @@
 import * as locators from "./paymentMethodsPage.locators"
-import * as commonActions from "../../utils/browserActions.utils";
-import * as customerCreditCardInformation from "../../../main/testData/config/customerConfigs/customerCreditDebitCardInformation.json";
+import * as commonActions from "@wdioUtils/browserActions.utils";
+import * as customerCreditCardInformation from "@wdioTestData/config/customerConfigs/customerCreditDebitCardInformation.json";
 import * as paymentMethodsPageAssertions from "./paymentMethodsPage.assertions";
 
 let name,cardNumber,exp,CVC,zipCode,tempName,tempCardNumber,tempExp,tempCVC,tempZipCode

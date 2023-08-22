@@ -1,8 +1,8 @@
 import * as locators from "./staffSignInPage.locators";
-import * as commonActions from "../../utils/browserActions.utils";
-import * as setUpCredentialsMerchant from "../../../main/testData/config/MCconfigs/merchantSignInCredentials.json";
-import * as setUpCredentialsCustomer from "../../../main/testData/config/customerConfigs/customerSignInCredential.json";
-import * as setUpCredentialsReseller from "../../../main/testData/config/resellerConfigs/resellerSignInCredentials.json";
+import * as commonActions from "@wdioUtils/browserActions.utils";
+import * as setUpCredentialsMerchant from "@wdioTestData/config/MCconfigs/merchantSignInCredentials.json";
+import * as setUpCredentialsCustomer from "@wdioTestData/config/customerConfigs/customerSignInCredential.json";
+import * as setUpCredentialsReseller from "@wdioTestData/config/resellerConfigs/resellerSignInCredentials.json";
 
 
 export async function checkSignInStatus()

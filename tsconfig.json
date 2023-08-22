@@ -10,6 +10,12 @@
             "expect-webdriverio",
             "@wdio/cucumber-framework"
         ],
+        "baseUrl": "main",
+        "paths":{
+            "@wdioUi/*":["ui/*"],
+            "@wdioUtils/*":["utils/*"],
+            "@wdioTestData/*":["testData/*"]
+        },
         "target": "es2022"
     }
 }

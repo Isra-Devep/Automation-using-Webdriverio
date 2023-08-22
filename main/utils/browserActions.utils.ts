@@ -1,4 +1,4 @@
-// import { syncModeDropdownOption } from "@wdio-ui/s3DataPage/s3DataPage.locators";
+
 let waits = {
     maxTimeout: 120000,
     verySmallWait: 2000,

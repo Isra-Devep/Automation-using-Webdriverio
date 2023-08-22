@@ -1,6 +1,6 @@
 import * as locators from "./productsPage.locators";
 
-import * as assertions from "../../utils/browserAssertions.utils"
+import * as assertions from "@wdioUtils/browserAssertions.utils"
 
 
 export async function checkIfProductPageIsOpen()
