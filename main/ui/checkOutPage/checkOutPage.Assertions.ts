@@ -1,6 +1,6 @@
 import * as locators from "./checkOutPage.locators";
 import * as commonAssertions from "wdioUtils/browserAssertions.utils";
-import * as checkOutPageActions from "./checkOutPage.actions";
+import * as checkOutPageActions from "./checkOutPage.Actions";
 import * as customerDropPurchaseConfig from "wdioTestData/config/customerConfigs/customerDropPurchaseConfig.json";
 import * as dropPurchasingCredentials from "wdioTestData/config/customerConfigs/customerDropPurchaseConfig.json";
 import {round} from 'lodash';

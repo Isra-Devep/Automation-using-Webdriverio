@@ -1,7 +1,7 @@
 import * as locators from "./orderPlacedPage.locators";
 import * as commonAssertions from "wdioUtils/browserAssertions.utils";
 import * as customerDropPurchaseConfig from "wdioTestData/config/customerConfigs/customerDropPurchaseConfig.json";
-import * as checkOutPageActions from "wdioUi/checkOutPage/checkOutPage.actions";
+import * as checkOutPageActions from "wdioUi/checkOutPage/checkOutPage.Actions";
 import * as dropPurchasingCredentials from "wdioTestData/config/customerConfigs/customerDropPurchaseConfig.json";
 import {round} from 'lodash';
 let subtotalExtracted,
