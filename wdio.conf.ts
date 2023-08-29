@@ -1,4 +1,7 @@
 import type { Options } from '@wdio/types'
+import fs from 'node:fs/promises'
+import { generate } from 'multiple-cucumber-html-reporter'
+require ('tsconfig-paths/register')
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -60,7 +63,8 @@ export const config: Options.Testrunner = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome',}
+        browserName: 'chrome',
+    }
         //{browserName: 'firefox'}
     ],
     //
@@ -132,7 +136,9 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [['cucumberjs-json', { outputDir: './reports/json' }]],
+    reporters: [
+        ['cucumberjs-json', { jsonFolder: './reports/json'}]
+    ],
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
@@ -174,8 +180,9 @@ export const config: Options.Testrunner = {
      * @param {object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare: function (config, capabilities) {
+        return fs.rm('.tmp/', { recursive: true });
+     },
     /**
      * Gets executed before a worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
@@ -316,8 +323,14 @@ export const config: Options.Testrunner = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+    onComplete: function(exitCode, config, capabilities, results) {
+        generate({
+            // Required
+            // This part needs to be the same path where you store the JSON files
+            // default = '.tmp/json/'
+            jsonDir: 'reports/json/',
+            reportPath: 'reports/report/',});
+    },
     /**
     * Gets executed when a refresh happens.
     * @param {string} oldSessionId session ID of the old session

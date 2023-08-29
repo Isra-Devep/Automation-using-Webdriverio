@@ -4,7 +4,6 @@ import * as singInPageActions from "wdioUi/staffSignInPage/staffSignInPage.tasks
 
 
 
-
 Given ("The user wants to signs in to the application as a customer", 
 async() =>{
     await browserSetUpActions.setUpBrowser("release");
