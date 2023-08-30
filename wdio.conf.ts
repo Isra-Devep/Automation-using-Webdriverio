@@ -1,6 +1,6 @@
 import type { Options } from '@wdio/types'
 import fs from 'node:fs/promises'
-import { generate } from 'multiple-cucumber-html-reporter'
+//import { generate } from 'multiple-cucumber-html-reporter'
 require ('tsconfig-paths/register')
 export const config: Options.Testrunner = {
     //
@@ -34,7 +34,7 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        'test/features/consumer-flows/makeAPurchaseAsACustomerFlow.feature'
+        'IsraTst/features/openSimpleDemo.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -144,7 +144,7 @@ export const config: Options.Testrunner = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['test/stepDefinitions/consumer-flows/makeAPurchaseAsACustomerFlow.steps.ts'],
+        require: ['IsraTst/stepDefinitions/simpleDemoFormSteps.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

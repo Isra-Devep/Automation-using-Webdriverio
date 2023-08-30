@@ -1,1 +1,0 @@
-export const getHamburgerMenu='//button[@aria-label="Open site navigation menu"]'
